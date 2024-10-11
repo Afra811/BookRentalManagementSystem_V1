@@ -8,52 +8,67 @@ namespace BookRentalManagementSystem_V1
 {
     public class Book
     {
-        private string bookId {  get; set; }
+        private string BookId {  get; set; }
         public string GetbookId() 
 
-        { return bookId; }
+        { return BookId; }
 
         public void SetbookId(string value)
         {
-            bookId = value;
+            BookId = value;
         }
 
 
 
-        private string title { get; set; }
+        private string Title { get; set; }
         public string Gettitle() 
         
-        { return title; }
+        { return Title; }
 
         public void Settitle(string value)
         {
-            title = value;
+            Title = value;
         }
 
 
-        private string author { get; set; }
+        private string Author { get; set; }
 
         public string Getauthor() 
         
-        { return author; }
+        { return Author; }
 
 
         public void Setauthor(string value)
         {
-            author = value;
+            Author = value;
         }
 
 
-        private decimal rentalprice { get; set; }
+        private decimal RentalPrice { get; set; }
 
         public decimal Getrentalprice() 
         
-        { return rentalprice; }
+        { return RentalPrice; }
 
 
         public void Setrentalprice(decimal value)
         {
-            rentalprice = value;
+            RentalPrice = value;
+        }
+
+        
+        public Book (string bookId, string title,  string author, decimal rentalPrice)
+        {
+            BookId=bookId;
+            Title=title;
+            Author=author;
+            RentalPrice = rentalPrice;
+
+        }
+
+        public override string ToString()
+        {
+            return ($"bookId: {BookId}, title: {Title}, author: {Author}, rentalPrice: {RentalPrice}");
         }
     }
 }
