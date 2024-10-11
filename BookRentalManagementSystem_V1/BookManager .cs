@@ -62,9 +62,9 @@ namespace BookRentalManagementSystem_V1
         }
 
 
-        public void DeleteBook(int bookId)
+        public void DeleteBook(string bookId)
         {
-            var book = books.Find(b => b.BookId == bookId);
+            var book = books.Find(b =>b.BookId == bookId);
             if (book != null)
             {
                 books.Remove(book);
