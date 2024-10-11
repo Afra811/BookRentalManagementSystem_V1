@@ -70,5 +70,9 @@ namespace BookRentalManagementSystem_V1
         {
             return ($"bookId: {BookId}, title: {Title}, author: {Author}, rentalPrice: {RentalPrice}");
         }
+
+
+       
+
     }
 }
