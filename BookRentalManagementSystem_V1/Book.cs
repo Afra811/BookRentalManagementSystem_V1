@@ -31,7 +31,29 @@ namespace BookRentalManagementSystem_V1
         }
 
 
-        private
+        private string author { get; set; }
 
+        public string Getauthor() 
+        
+        { return author; }
+
+
+        public void Setauthor(string value)
+        {
+            author = value;
+        }
+
+
+        private decimal rentalprice { get; set; }
+
+        public decimal Getrentalprice() 
+        
+        { return rentalprice; }
+
+
+        public void Setrentalprice(decimal value)
+        {
+            rentalprice = value;
+        }
     }
 }
