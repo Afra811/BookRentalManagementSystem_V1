@@ -13,9 +13,9 @@ namespace BookRentalManagementSystem_V1
 
         { return BookId; }
 
-        public void SetbookId(string value)
+        public void SetbookId(string bookId)
         {
-            BookId = value;
+            BookId = bookId;
         }
 
 

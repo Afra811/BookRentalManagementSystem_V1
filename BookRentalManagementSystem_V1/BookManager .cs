@@ -11,34 +11,36 @@ namespace BookRentalManagementSystem_V1
     {
         public List<Book> books = new List<Book>();
 
-        public void CreateBook( string bookId, string title, string author, decimal rentalPrice)
-        {
 
-            var book = new Book(bookId, title, author, rentalPrice);
+
+        public void CreateBook(Book book)
+        {
             books.Add(book);
-            Console.WriteLine("Book added successfully!");
+            Console.WriteLine("Book Added Succefully");
+
+
+
 
         }
 
         public void ReadBooks()
         {
-            Console.WriteLine("---Book List----\n");
-            if (books.Count > 0)
+            if (books.Count == 0)
+            {
+                Console.WriteLine("No Available Books");
+            }
+            else
             {
                 foreach (var book in books)
                 {
-                    Console.WriteLine($"BookId:{book.BookId}, Title:{book.Title}, Author:{book.Author}, RentalPrice:{book.RentalPrice}");
+                    Console.WriteLine(book);
                 }
-            }
-
-            else
-            {
-                Console.WriteLine("Book Not Available.......");
             }
         }
 
 
-        public void UpdateBook(int updateId, string newTitle, string newAuthor, decimal newRentalPrice)
+
+        public void UpdateBook(string updateId, string newTitle, string newAuthor, decimal newRentalPrice)
         {
             var book = books.Where(b => b.BookId == updateId).FirstOrDefault();
             Console.WriteLine(updateId);
