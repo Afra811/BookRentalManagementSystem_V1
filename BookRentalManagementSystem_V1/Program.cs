@@ -46,7 +46,7 @@ namespace BookRentalManagementSystem_V1
 
                     case "2":
                         Console.Clear();
-                      
+                        Console.WriteLine("View All Books");
                         Console.ReadLine(); // Wait for user input before continuing
                         break;
 
@@ -79,9 +79,6 @@ namespace BookRentalManagementSystem_V1
                         Console.WriteLine("Invalid option. Please try again.");
                         break;
                 };
-
-
-
 
                 Console.WriteLine("\n press any key to continue.....");
                 Console.ReadKey();

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using System.Runtime.Remoting.Lifetime;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -77,5 +78,26 @@ namespace BookRentalManagementSystem_V1
         }
 
 
+        public decimal ValidateBookRentalPrice()
+        {
+            decimal price;
+            do
+            {
+                Console.WriteLine("Rental price must be a positive value.");
+                price = decimal.Parse(Console.ReadLine());
+                if (price <= 0)
+                {
+                    Console.WriteLine("Invalid input. Please try again.");
+                }
+                else
+                {
+                    Console.WriteLine(" Please enter a valid rental price:");
+                }
+            } while (price <= 0);
+            return price;
+        }
+
     }
+   
 }
+
