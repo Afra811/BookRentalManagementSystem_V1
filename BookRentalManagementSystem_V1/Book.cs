@@ -16,7 +16,7 @@ namespace BookRentalManagementSystem_V1
 
         public decimal RentalPrice { get; set; }
 
-      
+        public static int TotalBooks = 0;
 
 
         public Book(string bookId, string title, string author, decimal rentalPrice)
@@ -25,7 +25,7 @@ namespace BookRentalManagementSystem_V1
             Title = title;
             Author = author;
             RentalPrice = rentalPrice;
-
+            TotalBooks++;
         }
 
         public override string ToString()
@@ -33,6 +33,10 @@ namespace BookRentalManagementSystem_V1
             return ($"bookId: {BookId}, title: {Title}, author: {Author}, rentalPrice: {RentalPrice}");
         }
 
+        public virtual string DisplayBookInfo()
+        {
+            return $"bookId: {BookId}, Title: {Title}, Author: {Author}, RentalPrice: {RentalPrice}";
+        }
 
 
 
